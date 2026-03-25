@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ASKİ E-Şube — Online işlemler ve giriş (prototip)." />
+    <title>E-Şube giriş — ASKİ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-esube">
+    <a class="skip-link" href="#esube-icerik">İçeriğe geç</a>
+
+    <header class="site-header" data-header>
+      <div class="shell header__inner">
+        <div class="brand-cluster">
+          <a class="brand" href="index.html">
+            <img class="brand__logo" src="askilogo.jpeg" width="52" height="52" alt="ASKİ" />
+            <span class="brand__text">
+              <span class="brand__title">ASKİ</span>
+              <span class="brand__subtitle">E-Şube</span>
+            </span>
+          </a>
+          <span class="brand-cluster__sep" aria-hidden="true"></span>
+          <a
+            class="brand-cluster__abb"
+            href="https://ankara.bel.tr"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ankara Büyükşehir Belediyesi"
+          >
+            <img class="brand-cluster__abb-img" src="abb-logo.png" width="120" height="40" alt="Ankara Büyükşehir Belediyesi" />
+          </a>
+        </div>
+
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="visually-hidden">Menüyü aç / kapat</span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" data-nav>
+          <ul class="site-nav__list">
+            <li><a href="index.html">Ana sayfa</a></li>
+            <li><a href="index.html#hizli">Hızlı işlemler</a></li>
+            <li><a href="index.html#durum">Kesinti</a></li>
+            <li><a href="index.html#iletisim">İletişim</a></li>
+          </ul>
+          <a class="btn btn--primary btn--sm site-nav__cta" href="esube.html" aria-current="page">E-Şube giriş</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="esube-icerik" class="esube-main">
+      <div class="shell esube-layout">
+        <div class="esube-intro">
+          <p class="esube-intro__badge">Online işlem merkezi</p>
+          <h1 class="esube-intro__title"><span>ASKİ</span> E-Şube’ye hoş geldiniz</h1>
+
+          <div class="esube-intro__block">
+            <h2>Üye olarak yapabilecekleriniz</h2>
+            <p>
+              Abonelik işlemleri, fatura ödeme, borç görüntüleme, fatura itirazı, fatura sorgulama, dijital fatura talep ve iptal (örnek liste — prototip).
+            </p>
+          </div>
+
+          <div class="esube-intro__block">
+            <h2>Üye olmadan yapabilecekleriniz</h2>
+            <p>
+              Müracaat numarası ile ödeme, arıza ve şikâyet bildirimi, bilgi edinme başvurusu gibi işlemler için kurumsal sitedeki üyeliksiz kanallar (prototip metni).
+            </p>
+          </div>
+
+          <p class="esube-intro__note">
+            Ana sayfaya dönmek için <a href="index.html">buraya tıklayın</a>. Bu ekran İSKİ E-Şube düzeninden esinlenerek hazırlanmıştır; gerçek giriş entegrasyonu yoktur.
+          </p>
+        </div>
+
+        <div class="esube-card">
+          <h2 class="esube-card__title">Giriş</h2>
+
+          <div class="login-tabs" role="tablist" aria-label="Giriş türü">
+            <button type="button" class="login-tabs__btn" role="tab" aria-selected="true" aria-controls="panel-bireysel" id="tab-bireysel" data-login-tab="bireysel">
+              Bireysel üye
+            </button>
+            <button type="button" class="login-tabs__btn" role="tab" aria-selected="false" aria-controls="panel-kurumsal" id="tab-kurumsal" data-login-tab="kurumsal">
+              Kurumsal üye
+            </button>
+          </div>
+
+          <div class="login-panel" id="panel-bireysel" role="tabpanel" aria-labelledby="tab-bireysel" data-login-panel="bireysel">
+            <p class="kvkk-line">
+              Kişisel verilerin işlenmesine ilişkin bilgilendirme metnini okumak için
+              <a href="#">tıklayınız</a> (prototip).
+            </p>
+            <label class="kvkk-check">
+              <input type="checkbox" id="kvkk-ok" />
+              <span>Aydınlatma metnini okudum, anladım.</span>
+            </label>
+            <a class="edevlet-box" href="#" id="edevlet-giris" title="Prototip — e-Devlet bağlantısı yok">
+              <span class="edevlet-box__icon" aria-hidden="true">e-D</span>
+              <span class="edevlet-box__text">
+                <strong>e-Devlet kapısı ile giriş yap</strong>
+                <span>T.C. kimlik doğrulaması ile güvenli erişim (canlı sistemde).</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="login-panel" id="panel-kurumsal" role="tabpanel" aria-labelledby="tab-kurumsal" data-login-panel="kurumsal" hidden>
+            <form class="form-stack" action="#" method="post">
+              <label class="visually-hidden" for="kurum-no">Kurum numarası</label>
+              <input id="kurum-no" class="round-input" type="text" name="kurumNo" placeholder="Kurum numarası" autocomplete="username" inputmode="numeric" />
+
+              <label class="visually-hidden" for="kurum-sifre">Şifre</label>
+              <input id="kurum-sifre" class="round-input" type="password" name="sifre" placeholder="Şifre" autocomplete="current-password" />
+
+              <p class="esube-hint">Canlı ortamda güvenlik doğrulaması (ör. CAPTCHA) eklenebilir.</p>
+
+              <button type="button" class="esube-submit">Giriş yap</button>
+            </form>
+          </div>
+
+          <div class="esube-foot">
+            <a href="#">Şifremi unuttum</a>
+            ·
+            <a href="#">Üyeliksiz işlemler</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logos">
+            <img class="footer__logo" src="askilogo.jpeg" width="72" height="72" alt="ASKİ" loading="lazy" decoding="async" />
+            <img class="footer__logo footer__logo--abb" src="abb-logo.png" width="140" height="48" alt="Ankara Büyükşehir Belediyesi" loading="lazy" decoding="async" />
+          </div>
+          <p class="footer__tagline">Ankara Büyükşehir Belediyesi · Ankara Su ve Kanalizasyon İdaresi</p>
+        </div>
+        <div class="footer__block">
+          <h3 class="footer__heading">İletişim</h3>
+          <address class="footer__address">
+            Hacı Bayram Mah. Kazım Karabekir Cad. No:70<br />
+            06050 Altındağ / Ankara
+          </address>
+          <p><a href="tel:153">153</a> Çağrı merkezi</p>
+        </div>
+      </div>
+      <div class="shell footer__bottom">
+        <p>© ASKİ — UI/UX prototipi; resmi kurum sitesi değildir.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
