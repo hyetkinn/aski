@@ -50,21 +50,6 @@
         </div>
 
         <div class="header__tools">
-          <div class="site-search" data-site-search>
-            <label class="visually-hidden" for="site-search-input">Site içi ara</label>
-            <input
-              type="search"
-              id="site-search-input"
-              class="site-search__input"
-              placeholder="Site içi ara…"
-              autocomplete="off"
-              maxlength="80"
-              aria-autocomplete="list"
-              aria-controls="site-search-results"
-              aria-expanded="false"
-            />
-            <div class="site-search__dropdown" id="site-search-results" role="listbox" aria-label="Arama sonuçları" hidden></div>
-          </div>
           <button type="button" class="theme-toggle" data-theme-toggle aria-label="Karanlık temayı aç" title="Görünüm">
             <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -131,9 +116,27 @@
         <div class="shell">
           <div class="section__head">
             <h2 id="hizli-title" class="section__title">Hızlı işlemler</h2>
-            <p class="section__desc">En çok kullanılan işlemler; bir tıkla ilgili adıma yönlendirilirsiniz (prototip).</p>
+            <p class="section__desc">Fatura, şikâyet ve takip; bir tıkla ilgili adıma yönlendirilirsiniz (prototip).</p>
           </div>
           <ul class="quick-grid">
+            <li>
+              <a class="quick-card" href="tel:153">
+                <span class="quick-card__icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                </span>
+                <span class="quick-card__title">Şikâyet / arıza bildir</span>
+                <span class="quick-card__hint">153 çağrı merkezi veya kayıt numarası alın</span>
+              </a>
+            </li>
+            <li>
+              <a class="quick-card" href="#">
+                <span class="quick-card__icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14h6"/><path d="M9 18h6"/><path d="M9 10h2"/></svg>
+                </span>
+                <span class="quick-card__title">Şikâyet / başvuru takibi</span>
+                <span class="quick-card__hint">Başvuru numarası ile durum sorgulama (prototip)</span>
+              </a>
+            </li>
             <li>
               <a class="quick-card" href="esube.html">
                 <span class="quick-card__icon" aria-hidden="true">
