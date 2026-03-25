@@ -9,36 +9,71 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches))
+          document.documentElement.setAttribute("data-theme", "dark");
+      })();
+    </script>
   </head>
   <body class="page-esube">
     <a class="skip-link" href="#esube-icerik">İçeriğe geç</a>
 
     <header class="site-header" data-header>
       <div class="shell header__inner">
-        <div class="brand-cluster">
-          <a class="brand" href="index.html">
-            <img class="brand__logo" src="askilogo.jpeg" width="52" height="52" alt="ASKİ" />
-            <span class="brand__text">
-              <span class="brand__title">ASKİ</span>
-              <span class="brand__subtitle">E-Şube</span>
-            </span>
-          </a>
-          <span class="brand-cluster__sep" aria-hidden="true"></span>
-          <a
-            class="brand-cluster__abb"
-            href="https://ankara.bel.tr"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ankara Büyükşehir Belediyesi"
-          >
-            <img class="brand-cluster__abb-img" src="abb-logo.png" width="120" height="40" alt="Ankara Büyükşehir Belediyesi" />
-          </a>
+        <div class="header__brand-row">
+          <div class="brand-cluster">
+            <a class="brand" href="index.html">
+              <img class="brand__logo" src="askilogo.jpeg" width="52" height="52" alt="ASKİ" />
+              <span class="brand__text">
+                <span class="brand__title">ASKİ</span>
+                <span class="brand__subtitle">E-Şube</span>
+              </span>
+            </a>
+            <span class="brand-cluster__sep" aria-hidden="true"></span>
+            <a
+              class="brand-cluster__abb"
+              href="https://ankara.bel.tr"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Ankara Büyükşehir Belediyesi"
+            >
+              <img class="brand-cluster__abb-img" src="abb-logo.png" width="120" height="40" alt="Ankara Büyükşehir Belediyesi" />
+            </a>
+          </div>
+
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+            <span class="nav-toggle__bar"></span>
+            <span class="visually-hidden">Menüyü aç / kapat</span>
+          </button>
         </div>
 
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
-          <span class="nav-toggle__bar"></span>
-          <span class="visually-hidden">Menüyü aç / kapat</span>
-        </button>
+        <div class="header__tools">
+          <div class="site-search" data-site-search>
+            <label class="visually-hidden" for="site-search-input-esube">Site içi ara</label>
+            <input
+              type="search"
+              id="site-search-input-esube"
+              class="site-search__input"
+              placeholder="Site içi ara…"
+              autocomplete="off"
+              maxlength="80"
+              aria-autocomplete="list"
+              aria-controls="site-search-results-esube"
+              aria-expanded="false"
+            />
+            <div class="site-search__dropdown" id="site-search-results-esube" role="listbox" aria-label="Arama sonuçları" hidden></div>
+          </div>
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Karanlık temayı aç" title="Görünüm">
+            <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+            <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true" hidden>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            </span>
+          </button>
+        </div>
 
         <nav id="site-nav" class="site-nav" data-nav>
           <ul class="site-nav__list">
@@ -138,6 +173,20 @@
             <img class="footer__logo footer__logo--abb" src="abb-logo.png" width="140" height="48" alt="Ankara Büyükşehir Belediyesi" loading="lazy" decoding="async" />
           </div>
           <p class="footer__tagline">Ankara Büyükşehir Belediyesi · Ankara Su ve Kanalizasyon İdaresi</p>
+          <div class="footer__social" aria-label="Sosyal medya">
+            <a class="footer__social-link" href="https://www.facebook.com/ankarabuyuksehir" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a class="footer__social-link" href="https://twitter.com/abbankara26" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a class="footer__social-link" href="https://www.instagram.com/ankara_bel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a class="footer__social-link" href="https://www.youtube.com/user/AnkaraBelTV" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
         </div>
         <div class="footer__block">
           <h3 class="footer__heading">İletişim</h3>
