@@ -153,7 +153,7 @@ a:hover {
   min-width: 0;
 }
 
-@media (min-width: 881px) {
+@media (min-width: 1200px) {
   .header__inner {
     flex-wrap: nowrap;
   }
@@ -175,6 +175,45 @@ a:hover {
 @media (min-width: 881px) {
   .header__tools {
     margin-right: 0.5rem;
+  }
+}
+
+/* 881–1199px: logo + arama üst satırda; menü tam genişlikte alt satır (çakışmayı önler) */
+@media (min-width: 881px) and (max-width: 1199px) {
+  .header__inner {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+
+  .header__tools {
+    flex: 1 1 auto;
+    max-width: min(360px, 42vw);
+    min-width: 160px;
+  }
+
+  .site-nav {
+    flex-basis: 100%;
+    width: 100%;
+    margin-left: 0 !important;
+    padding-top: 0.65rem;
+    border-top: 1px solid var(--color-border);
+    gap: 0.75rem;
+  }
+
+  .site-nav__list {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 4px;
+    mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 28px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 28px), transparent 100%);
+  }
+
+  .site-nav__list li {
+    flex-shrink: 0;
   }
 }
 
@@ -451,11 +490,30 @@ a:hover {
   padding: 0;
 }
 
+@media (min-width: 881px) {
+  .site-nav__list {
+    flex-wrap: nowrap;
+    gap: 0.35rem 0.85rem;
+  }
+
+  .site-nav__list a {
+    white-space: nowrap;
+    font-size: 0.875rem;
+    padding: 0.35rem 0.1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-nav__list a {
+    font-size: 0.9375rem;
+    padding: 0.35rem 0;
+  }
+}
+
 .site-nav__list a {
   text-decoration: none;
   font-weight: 500;
   color: var(--color-ink-muted);
-  padding: 0.35rem 0;
 }
 
 .site-nav__list a:hover,
