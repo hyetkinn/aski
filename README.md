@@ -20,6 +20,29 @@ Statik HTML/CSS prototipi. **Resmi kurum sitesi değildir.**
 
 Private repo + Pages: ücretsiz planda Pages da private olabilir; sadece davetli kullanıcılar görebilir (organizasyon ayarına bağlı).
 
+## Vercel ile paylaşım (`*.vercel.app`)
+
+[Çorum HDF taslağındaki](https://hdf-2vz1.vercel.app/) gibi kısa bir **`.vercel.app`** adresi için:
+
+### A) GitHub’dan (önerilen)
+
+1. Projeyi GitHub’a push edin (yukarıdaki gibi).
+2. [vercel.com](https://vercel.com) → **Add New… → Project** → GitHub reponuzu seçin.
+3. **Framework Preset:** Other (veya boş). **Build Command:** boş. **Output Directory:** boş / `.` (kökte `index.html` olduğu için ek ayar gerekmez).
+4. **Deploy** — birkaç dakika içinde `https://proje-adi-xxx.vercel.app` benzeri link üretilir.
+5. İsterseniz **Settings → Domains** ile özel alan adı da bağlayabilirsiniz.
+
+### B) CLI ile (repo olmadan deneme)
+
+```bash
+cd /path/to/aski
+npx vercel
+```
+
+İlk seferde hesap bağlayıp onaylarsınız; sonunda da aynı şekilde `*.vercel.app` linki verilir. `npx vercel --prod` ile “production” URL’i sabitlenir.
+
+---
+
 ## Yerel önizleme
 
 ```bash
