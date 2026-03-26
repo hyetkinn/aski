@@ -95,18 +95,19 @@
           <div class="hero__panel" role="region" aria-label="Özet durum">
             <div class="stat-card stat-card--live" data-live-weather>
               <span class="stat-card__label">Ankara — canlı hava</span>
-              <span class="stat-card__value stat-card__value--weather" data-weather-temp>—°C</span>
-              <span class="stat-card__meta" data-weather-meta>Kaynak: Open-Meteo API</span>
+              <span class="stat-card__value stat-card__value--weather" data-weather-temp aria-live="polite">Yükleniyor…</span>
+              <span class="stat-card__meta" data-weather-meta>Open-Meteo API'den alınıyor…</span>
             </div>
             <div class="stat-card">
-              <span class="stat-card__label">Şehre verilen su (örnek gün)</span>
-              <span class="stat-card__value">1.340.068 <span class="stat-card__unit">m³</span></span>
-              <span class="stat-card__meta">Metropol bölgeleri kapsamı*</span>
+              <span class="stat-card__label">Güncel duyurular</span>
+              <span class="stat-card__value stat-card__value--sm">En son güncellemeler burada</span>
+              <span class="stat-card__meta">Duyurular bölümüne göz atın</span>
+              <a class="stat-card__link" href="#duyurular">Duyurulara git →</a>
             </div>
             <div class="stat-card stat-card--muted">
-              <span class="stat-card__label">Baraj doluluk</span>
-              <span class="stat-card__value stat-card__value--sm">Güncel veri için tıklayın</span>
-              <a class="stat-card__link" href="#durum">Durumu gör →</a>
+              <span class="stat-card__label">Baraj & kuraklık</span>
+              <span class="stat-card__value stat-card__value--sm">Şeffaflık bölümünde</span>
+              <a class="stat-card__link" href="#hizmetler">Şeffaflığa git →</a>
             </div>
           </div>
         </div>
@@ -129,7 +130,7 @@
               </a>
             </li>
             <li>
-              <a class="quick-card" href="#">
+              <a class="quick-card" href="esube.html">
                 <span class="quick-card__icon" aria-hidden="true">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14h6"/><path d="M9 18h6"/><path d="M9 10h2"/></svg>
                 </span>
@@ -156,7 +157,7 @@
               </a>
             </li>
             <li>
-              <a class="quick-card" href="#">
+              <a class="quick-card" href="#durum">
                 <span class="quick-card__icon" aria-hidden="true">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                 </span>
@@ -165,7 +166,7 @@
               </a>
             </li>
             <li>
-              <a class="quick-card" href="#">
+              <a class="quick-card" href="esube.html">
                 <span class="quick-card__icon" aria-hidden="true">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </span>
@@ -174,7 +175,7 @@
               </a>
             </li>
             <li>
-              <a class="quick-card" href="#">
+              <a class="quick-card" href="esube.html">
                 <span class="quick-card__icon" aria-hidden="true">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
                 </span>
@@ -183,7 +184,7 @@
               </a>
             </li>
             <li>
-              <a class="quick-card" href="#">
+              <a class="quick-card" href="#hizmetler">
                 <span class="quick-card__icon" aria-hidden="true">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                 </span>
@@ -246,62 +247,62 @@
             <div class="service-block">
               <h3 class="service-block__title">Vatandaş</h3>
               <ul class="link-list">
-                <li><a href="#">Su analiz sonuçları</a></li>
-                <li><a href="#">Kartlı sayaç ve matik noktaları</a></li>
-                <li><a href="#">Bilgi güncelleme (TC / GSM)</a></li>
-                <li><a href="#">Sık sorulan sorular</a></li>
+                <li><a href="404.html">Su analiz sonuçları</a></li>
+                <li><a href="404.html">Kartlı sayaç ve matik noktaları</a></li>
+                <li><a href="404.html">Bilgi güncelleme (TC / GSM)</a></li>
+                <li><a href="404.html">Sık sorulan sorular</a></li>
               </ul>
             </div>
             <div class="service-block">
               <h3 class="service-block__title">İş dünyası & proje</h3>
               <ul class="link-list">
-                <li><a href="#">Atıksu ruhsat başvurusu</a></li>
-                <li><a href="#">Kanal başvurusu</a></li>
-                <li><a href="#">Teknik şartnameler</a></li>
-                <li><a href="#">İhale duyuruları</a></li>
+                <li><a href="404.html">Atıksu ruhsat başvurusu</a></li>
+                <li><a href="404.html">Kanal başvurusu</a></li>
+                <li><a href="404.html">Teknik şartnameler</a></li>
+                <li><a href="404.html">İhale duyuruları</a></li>
               </ul>
             </div>
             <div class="service-block">
               <h3 class="service-block__title">Şeffaflık</h3>
               <ul class="link-list">
-                <li><a href="#">Baraj doluluk oranları</a></li>
-                <li><a href="#">Faaliyet raporları</a></li>
-                <li><a href="#">KVKK ve çerez politikası</a></li>
-                <li><a href="#">Bilgi edinme (153 Mavi Masa)</a></li>
+                <li><a href="404.html">Baraj doluluk oranları</a></li>
+                <li><a href="404.html">Faaliyet raporları</a></li>
+                <li><a href="404.html">KVKK ve çerez politikası</a></li>
+                <li><a href="404.html">Bilgi edinme (153 Mavi Masa)</a></li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="duyuru-title">
+      <section id="duyurular" class="section" aria-labelledby="duyuru-title">
         <div class="shell">
           <div class="section__head section__head--row">
             <div>
               <h2 id="duyuru-title" class="section__title">Duyurular</h2>
               <p class="section__desc">Kritik bilgiler üstte; haber akışı ana sayfayı domine etmez.</p>
             </div>
-            <a class="text-link" href="#">Tüm duyurular</a>
+            <a class="text-link" href="#duyurular">Tüm duyurular</a>
           </div>
           <ul class="news-list">
             <li>
               <article class="news-item">
                 <time class="news-item__date" datetime="2026-03-20">20 Mart 2026</time>
-                <h3 class="news-item__title"><a href="#">İçme suyu kalitesine ilişkin basın açıklaması</a></h3>
+                <h3 class="news-item__title"><a href="404.html">İçme suyu kalitesine ilişkin basın açıklaması</a></h3>
                 <p class="news-item__excerpt">Kısa özet metin; kullanıcı tıklamadan konuyu anlar.</p>
               </article>
             </li>
             <li>
               <article class="news-item">
                 <time class="news-item__date" datetime="2026-03-15">15 Mart 2026</time>
-                <h3 class="news-item__title"><a href="#">Bölgesel şebeke bakım çalışması — Çankaya</a></h3>
+                <h3 class="news-item__title"><a href="404.html">Bölgesel şebeke bakım çalışması — Çankaya</a></h3>
                 <p class="news-item__excerpt">Planlı kesinti saatleri ve etkilenen mahalleler.</p>
               </article>
             </li>
             <li>
               <article class="news-item">
                 <time class="news-item__date" datetime="2026-03-10">10 Mart 2026</time>
-                <h3 class="news-item__title"><a href="#">Mobil uygulama ile fatura takibi</a></h3>
+                <h3 class="news-item__title"><a href="404.html">Mobil uygulama ile fatura takibi</a></h3>
                 <p class="news-item__excerpt">Android ve iOS mağaza bağlantıları.</p>
               </article>
             </li>
@@ -313,11 +314,11 @@
         <div class="shell kurumsal-strip">
           <h2 id="kurumsal-title" class="visually-hidden">Kurumsal kısayollar</h2>
           <ul class="kurumsal-strip__list">
-            <li><a href="#">Genel müdürlük</a></li>
-            <li><a href="#">Bölge müdürlükleri</a></li>
-            <li><a href="#">Misyon ve vizyon</a></li>
-            <li><a href="#">Mevzuat</a></li>
-            <li><a href="#">Stratejik planlar</a></li>
+            <li><a href="404.html">Genel müdürlük</a></li>
+            <li><a href="404.html">Bölge müdürlükleri</a></li>
+            <li><a href="404.html">Misyon ve vizyon</a></li>
+            <li><a href="404.html">Mevzuat</a></li>
+            <li><a href="404.html">Stratejik planlar</a></li>
           </ul>
         </div>
       </section>
